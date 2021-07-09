@@ -35,31 +35,8 @@ document.addEventListener('keydown', function (e) {
 
 //btn scrolll
 btnScrollTo.addEventListener('click', function (e) {
-  const s1coords = section1.getBoundingClientRect();
-  // console.log(s1coords);
-  // console.log(e.target.getBoundingClientRect());
-  // console.log('Current scroll (X/Y)', window.pageXOffset, window.pageYOffset);
-  // console.log('height/width viewport', document.documentElement.clientHeight, document.documentElement.clientWidth);
-
-  //scrolling
-  // window.scrollTo(s1coords.left + window.pageXOffset, s1coords.top + window.pageYOffset);
-
-  // window.scrollTo({
-  //   left: s1coords.left + window.pageXOffset,
-  //   top: s1coords.top + window.pageYOffset,
-  //   behavior: 'smooth',
-  // });
-
   section1.scrollIntoView({ behavior: 'smooth' });
 });
-
-// document.querySelectorAll('.nav__link').forEach(function(el) {
-//   el.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     const id = this.getAttribute('href');
-//     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-//   })
-// })
 
 //event delegation
 //add event listener to common parent
@@ -128,6 +105,25 @@ const stickyNav = function (entries) {
 const headerObsorver = new IntersectionObserver(stickyNav, {
   root: null,
   threshold: 0,
-  rootMargin: `-${navHeight}px`
+  rootMargin: `-${navHeight}px`,
 });
 headerObsorver.observe(header);
+
+//revel sections
+const allSections = document.querySelectorAll('.section');
+
+const revelSection = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove('section--hidden');
+  observer.unobserve(entry.target);
+};
+const sectionObserver = new IntersectionObserver(revelSection, {
+  root: null,
+  threshold: 0.15,
+});
+allSections.forEach(section => {
+  sectionObserver.observe(section);
+  section.classList.add('section--hidden');
+});

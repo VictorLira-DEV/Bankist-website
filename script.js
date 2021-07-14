@@ -121,11 +121,11 @@ const revelSection = function (entries, observer) {
 };
 const sectionObserver = new IntersectionObserver(revelSection, {
   root: null,
-  threshold: 0.20,
+  threshold: 0.2,
 });
 allSections.forEach(section => {
   sectionObserver.observe(section);
-  section.classList.add('section--hidden');
+  // section.classList.add('section--hidden');
 });
 
 //lazy loading images
@@ -137,16 +137,57 @@ const loading = function (entries, observer) {
   if (!entry.isIntersecting) return;
   //replace the src attr with data-src
   entry.target.src = entry.target.dataset.src;
-  entry.target.addEventListener('load', function (){
+  entry.target.addEventListener('load', function () {
     entry.target.classList.remove('lazy-img');
-  })  
+  });
 
-  observer.unobserve(entry.target)
-}
+  observer.unobserve(entry.target);
+};
 
 const imgObserver = new IntersectionObserver(loading, {
   root: null,
   threshold: 0,
-  rootMargin: '200px'
+  rootMargin: '200px',
 });
 imgTargets.forEach(img => imgObserver.observe(img));
+
+//slider
+const btnLeft = document.querySelector('.slider__btn--left');
+const btnRight = document.querySelector('.slider__btn--right');
+const slides = document.querySelectorAll('.slide');
+const slider = document.querySelector('.slider');
+let currentSlide = 0;
+const maxSlide = slides.length;
+
+// slider.style.transform = 'scale(0.4) translateX(-1000px)';
+// slider.style.overflow = 'visible';
+
+const goToSlide = function (slide) {
+  slides.forEach((s, i) => {
+    s.style.transform = `translateX(${100 * (i - slide)}%)`;
+    console.log(`${100 * (i - slide)}%`);
+  });
+};
+goToSlide(0);
+
+//next slide
+const nextSlide = function () {
+  if (currentSlide === maxSlide - 1) {
+    currentSlide = 0;
+  } else {
+    currentSlide++;
+  }
+  goToSlide(currentSlide);
+};
+
+const prevSlide = function () {
+  if (currentSlide === 0) {
+    currentSlide = maxSlide - 1;
+  } else {
+    currentSlide--;
+  }
+  goToSlide(currentSlide);
+};
+
+btnRight.addEventListener('click', nextSlide);
+btnLeft.addEventListener('click', prevSlide);

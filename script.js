@@ -1,6 +1,4 @@
 'use strict';
-// Modal window
-
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
 const modal = document.querySelector('.modal');
@@ -33,18 +31,13 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-//btn scrolll
 btnScrollTo.addEventListener('click', function (e) {
   section1.scrollIntoView({ behavior: 'smooth' });
 });
 
 //event delegation
-//add event listener to common parent
-
 document.querySelector('.nav__links').addEventListener('click', function (e) {
   e.preventDefault();
-  //console.log(e.target) //indica onde o evento foi originado
-  //matching strategy
   if (e.target.classList.contains('nav__link')) {
     const id = e.target.getAttribute('href');
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
@@ -54,24 +47,18 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 tabsContainer.addEventListener('click', function (e) {
   const clicked = e.target.closest('.operations__tab');
   //guard clause
-
   if (!clicked) return;
-  //remove active class
   tabs.forEach(t => t.classList.remove('operations__tab--active'));
   tabsContent.forEach(c => c.classList.remove('operations__content--active'));
 
-  //activate tab
   clicked.classList.add('operations__tab--active');
 
-  //activating content area
   document
     .querySelector(`.operations__content--${clicked.dataset.tab}`)
     .classList.add('operations__content--active');
 });
 
 //menu fade animation
-//mouserenter does not bubble up
-
 const handleHover = function (e) {
   if (e.target.classList.contains('nav__link')) {
     const link = e.target;
@@ -88,7 +75,6 @@ const handleHover = function (e) {
 nav.addEventListener('mouseover', handleHover.bind(0.5));
 nav.addEventListener('mouseout', handleHover.bind(1));
 
-//using
 const header = document.querySelector('.header');
 const navHeight = nav.getBoundingClientRect().height;
 
@@ -107,6 +93,7 @@ const headerObsorver = new IntersectionObserver(stickyNav, {
   threshold: 0,
   rootMargin: `-${navHeight}px`,
 });
+
 headerObsorver.observe(header);
 
 //revel sections
@@ -115,17 +102,17 @@ const allSections = document.querySelectorAll('.section');
 const revelSection = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
-
   entry.target.classList.remove('section--hidden');
   observer.unobserve(entry.target);
 };
+
 const sectionObserver = new IntersectionObserver(revelSection, {
   root: null,
   threshold: 0.2,
 });
+
 allSections.forEach(section => {
   sectionObserver.observe(section);
-  // section.classList.add('section--hidden');
 });
 
 //lazy loading images
@@ -214,7 +201,6 @@ const slider = function () {
   };
   init();
 
-  //eventHandler
   btnRight.addEventListener('click', nextSlide);
   btnLeft.addEventListener('click', prevSlide);
 

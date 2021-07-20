@@ -1,0 +1,24 @@
+.section--sign-up {
+  background-color: #37383d;
+  border-top: none;
+  border-bottom: 1px solid #444;
+  text-align: center;
+  padding: 10rem 3rem;
+  .btn {
+    font-size: 1.9rem;
+    padding: 2rem 5rem;
+  }
+}
+.section__title h3 {
+  margin-bottom: 6rem;
+  color: #444;
+}
+
+.section__title h4 {
+  margin-bottom: 6rem;
+  color: white;
+}
+
+.section__header {
+  text-align: center;
+}

@@ -15,49 +15,51 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <header class="header">
-      <nav class="nav">
-        <img
-          src="img/logo.png"
-          alt="Bankist logo"
-          class="nav__logo"
-          id="logo"
-        />
-        <ul class="nav__links">
-          <li class="nav__item">
-            <a class="nav__link" href="#section--1">Features</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#section--2">Operations</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#section--3">Testimonials</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link nav__link--btn btn--show-modal" href="#"
-              >Open account</a
-            >
-          </li>
-        </ul>
-      </nav>
+    <header id="navigation">
+      <div class="navigation">
+        <div class="hamburguer checkbtn">
+          <i class="fas fa-bars"> </i>
+        </div>
+        <nav>
+          <img
+            src="img/logo.png"
+            alt="Bankist logo"
+            class="nav__logo"
+            id="logo"
+          />
 
-      <div class="header__title">
-        <h1>
-          When
-          <!-- Green highlight effect -->
-          <span class="highlight">banking</span>
-          meets<br />
-          <span class="highlight">minimalist</span>
-        </h1>
-        <h4>A simpler banking experience for a simpler life.</h4>
-        <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
-        <img
-          src="img/hero.png"
-          class="header__img"
-          alt="Minimalist bank items"
-        />
+          <ul class="hidden-menu nav__links">
+            <li class="nav__item">
+              <a class="nav__link" href="#navigation">Features</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#contato">Operations</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#slider-show">Testimonials</a>
+            </li>
+            <li class="nav__item">
+              <a class="btn--open_account" href="#begin-aventure"
+                >Open account
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
+
+    <div class="header__title">
+      <h1>
+        When
+        <!-- Green highlight effect -->
+        <span class="highlight">banking</span>
+        meets<br />
+        <span class="highlight">minimalist</span>
+      </h1>
+      <h4>A simpler banking experience for a simpler life.</h4>
+      <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
+      <img src="img/hero.png" class="header__img" alt="Minimalist bank items" />
+    </div>
 
     <section class="section" id="section--1">
       <div class="section__title">
@@ -357,5 +359,10 @@
       </form>
     </div>
     <div class="overlay hidden"></div>
+    <script
+      src="https://kit.fontawesome.com/545ea23f83.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./menu.js"></script>
   </body>
 </html>

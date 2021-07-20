@@ -97,25 +97,38 @@ header {
   margin-left: 4rem;
 }
 
+.navigation .nav__links .nav__item .nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  padding: 7px 15px;
+  border-radius: 2px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
 .navigation .nav__links .nav__item .nav__link.nav__link--btn:link, .navigation .nav__links .nav__item .nav__link:visited {
   padding: 0.8rem 2.5rem;
   border-radius: 3rem;
-  color: #222;
 }
 
 .navigation .nav__links .nav__item .nav__link:link, .navigation .nav__links .nav__item .nav__link:active {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  color: inherit;
   text-decoration: none;
   display: block;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.navigation .nav__links .nav__item .nav__link.nav__link--btn:hover, .navigation .nav__links .nav__item .nav__link:active {
-  color: inherit;
-  color: #333;
+.navigation .nav__links .nav__item .btn--open_account {
+  text-decoration: none;
+  color: #444;
+  font-size: 1.7rem;
+  padding: 0.8rem 2.5rem;
+  border-radius: 3rem;
+  background: var(--color-primary);
 }
 
 .navigation .nav__logo {
@@ -123,10 +136,6 @@ header {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: block;
-}
-
-.navigation img {
-  display: none;
 }
 
 .navigation .checkbtn {
@@ -149,36 +158,9 @@ header {
           align-items: center;
 }
 
-.navigation ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.navigation ul li a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: black;
-  padding: 7px 15px;
-  border-radius: 2px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  font-size: 1.3rem;
-}
-
-.navigation ul li .btn--open_account {
-  padding: 0.8rem 2.5rem;
-  border-radius: 3rem;
-  background: var(--color-primary);
-}
-
 @media (max-width: 918px) {
   .navigation {
-    padding: 25px;
+    padding: 10px;
     position: fixed;
     background: var(--gradient-mobile);
   }
@@ -193,8 +175,9 @@ header {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .navigation ul {
+  .navigation .nav__links {
     position: fixed;
+    color: white;
     z-index: 100;
     width: 100%;
     height: 100vh;
@@ -212,17 +195,21 @@ header {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    top: 80px;
+    top: 50px;
   }
-  .navigation ul.display-menu {
+  .navigation .nav__links.display-menu {
     left: 0;
   }
-  .navigation ul li {
+  .navigation .nav__links .nav__item {
+    color: white;
     margin: 50px 0;
   }
-  .navigation ul li a {
+  .navigation .nav__links .nav__item .nav__link {
     color: white;
     font-size: 1.7rem;
+  }
+  .navigation .nav__links .nav__item .btn--open_account {
+    color: white;
   }
 }
 

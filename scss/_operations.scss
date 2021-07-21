@@ -1,9 +1,10 @@
 /* OPERATIONS */
+@import './variables';
 .operations {
   max-width: 100rem;
   margin: 12rem auto 0 auto;
 
-  background-color: #fff;
+  background-color: $color-white;
   .operations__tab-container {
     display: flex;
     justify-content: center;
@@ -17,19 +18,19 @@
       }
 
       &.operations__tab--1 {
-        background-color: var(--color-secondary);
+        background-color: $color-secondary;
       }
       &.operations__tab--1:hover {
-        background-color: var(--color-secondary-darker);
+        background-color: $color-secondary-darker;
       }
 
       &.operations__tab--3 {
-        background-color: var(--color-tertiary);
+        background-color: $color-tertiary;
         margin: 0;
       }
 
       &.operations__tab--3:hover {
-        background-color: var(--color-tertiary-darker);
+        background-color: $color-tertiary-darker;
       }
 
       &.operations__tab--active {
@@ -45,22 +46,22 @@
     width: 7rem;
     border-radius: 50%;
     &.operations__icon--1 {
-      background-color: var(--color-secondary-opacity);
+      background-color: $color-secondary-opacity;
     }
     &.operations__icon--2 {
-      background-color: var(--color-primary-opacity);
+      background-color: $color-primary-opacity;
     }
     &.operations__icon--3 {
-      background-color: var(--color-tertiary-opacity);
+      background-color: $color-tertiary-opacity;
     }
     &.operations__icon--1 svg {
-      fill: var(--color-secondary-darker);
+      fill: $color-secondary-darker;
     }
     &.operations__icon--2 svg {
-      fill: var(--color-primary);
+      fill: $color-primary;
     }
     &.operations__icon--3 svg {
-      fill: var(--color-tertiary);
+      fill: $color-tertiary;
     }
     svg {
       height: 2.75rem;
@@ -109,17 +110,14 @@
 
 @media screen and (max-width: 603px) {
   #section--2 {
-    padding: 150px 0;
+    padding: 150px 1rem;
   }
 }
 
 @media screen and (max-width: 471px) {
   .operations__content {
     &.operations__content--active {
-      padding: 40px 0;
-      p{
-        // text-align: justify;
-      }
+      padding: 1rem 0;
     }
   }
 }

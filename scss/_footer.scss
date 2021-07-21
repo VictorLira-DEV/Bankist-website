@@ -1,17 +1,22 @@
 /* FOOTER */
+@import './variables';
 .footer {
   padding: 10rem 3rem;
   background-color: #37383d;
   .footer__nav {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     margin-bottom: 5rem;
+    width: 100%;
     .footer__item {
-      margin-right: 4rem;
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
       .footer__link {
         font-size: 1.6rem;
-        color: #eee;
+        color: $color-white;
         text-decoration: none;
       }
     }
@@ -32,5 +37,19 @@
     .footer__link {
       font-size: 1.4rem;
     }
+  }
+}
+
+@media screen and(max-width: 527px) {
+  .footer {
+    .footer__nav {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and(max-width: 365px) {
+  .footer {
+    padding: 10rem 1rem;
   }
 }

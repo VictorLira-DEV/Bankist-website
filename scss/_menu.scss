@@ -1,9 +1,12 @@
 //menu
+@import './variables';
 header {
   width: 100%;
-  max-width: 128rem;
   position: relative;
-  margin: 0 auto;
+}
+
+.section-header {
+  position: relative;
 }
 
 .navigation {
@@ -14,7 +17,7 @@ header {
   padding: 30px;
   &.sticky {
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.5);
   }
   .nav__links {
     display: flex;
@@ -42,7 +45,6 @@ header {
         &:active {
           font-size: 1.5rem;
           font-weight: 400;
-          // color: inherit;
           text-decoration: none;
           display: block;
           transition: all 0.3s;
@@ -54,7 +56,7 @@ header {
         font-size: 1.7rem;
         padding: 0.8rem 2.5rem;
         border-radius: 3rem;
-        background: var(--color-primary);
+        background: $color-primary;
       }
     }
   }
@@ -67,7 +69,7 @@ header {
 
   .checkbtn {
     font-size: 30px;
-    color: whitesmoke;
+    color: $color-white;
     margin-right: 40px;
     cursor: pointer;
     display: none;
@@ -84,7 +86,7 @@ header {
   .navigation {
     padding: 10px;
     position: fixed;
-    background: var(--gradient-mobile);
+    background: $gradient-mobile;
 
     .nav__logo {
       display: none;
@@ -97,13 +99,13 @@ header {
 
     .nav__links {
       position: fixed;
-      color: white;
+      color: $color-white;
       z-index: 100;
       width: 100%;
       height: 100vh;
       left: -100%;
       transition: all 0.5s;
-      background: var(--gradient-mobile);
+      background: $gradient-mobile;
       align-items: center;
       flex-direction: column;
       justify-content: flex-start;
@@ -114,14 +116,14 @@ header {
       }
 
       .nav__item {
-        color: white;
+        color: $color-white;
         margin: 50px 0;
         .nav__link {
-          color: white;
+          color: $color-white;
           font-size: 1.7rem;
         }
         .btn--open_account {
-          color: white;
+          color: $color-white;
         }
       }
     }

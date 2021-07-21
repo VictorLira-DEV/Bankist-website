@@ -1,4 +1,3 @@
- 
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,53 +15,61 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <header id="navigation">
-      <div class="navigation">
-        <div class="hamburguer checkbtn">
-          <i class="fas fa-bars"> </i>
-        </div>
-        <nav class="nav">
-          <img
-            src="img/logo.png"
-            alt="Bankist logo"
-            class="nav__logo"
-            id="logo"
-          />
+    <div class="section-header">
+      <header id="navigation">
+        <div class="navigation nav">
+          <div class="hamburguer checkbtn">
+            <i class="fas fa-bars"> </i>
+          </div>
+          <nav class="nav">
+            <img
+              src="img/logo.png"
+              alt="Bankist logo"
+              class="nav__logo"
+              id="logo"
+            />
 
-          <ul class="nav__links hidden-menu">
-            <li class="nav__item">
-              <a class="nav__link" href="#navigation">Features</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#contato">Operations</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#slider-show">Testimonials</a>
-            </li>
-            <li class="nav__item">
-              <a class="btn--open_account" href="#begin-aventure"
-                >Open account
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <!-- parei aqui -->
-    <div class="header__title">
-      <div class="header_banner--text">
-        <h1>
-          When
-          <!-- Green highlight effect -->
-          <span class="highlight">banking</span>
-          meets<br />
-          <span class="highlight">minimalist</span>
-        </h1>
-        <h4>A simpler banking experience for a simpler life.</h4>
-        <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
-      </div>
-      <div class="header_banner--img">
-        <img src="img/hero.png" class="header__img" alt="Minimalist bank items" />
+            <ul class="nav__links hidden-menu">
+              <li class="nav__item">
+                <a class="nav__link" href="#navigation">Features</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#operations">Operations</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#section--3">Testimonials</a>
+              </li>
+              <li class="nav__item">
+                <a class="btn--show-modal btn--open_account" href="#begin-aventure"
+                  >Open account
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- parei aqui -->
+      <div class="header__title">
+        <div class="header_banner--text">
+          <h1>
+            When
+            <!-- Green highlight effect -->
+            <span class="highlight">banking</span>
+            meets<br />
+            <span class="highlight">minimalist</span>
+          </h1>
+          <h4>A simpler banking experience for a simpler life.</h4>
+          <button class="btn--text btn--scroll-to">
+            Learn more &DownArrow;
+          </button>
+        </div>
+        <div class="header_banner--img">
+          <img
+            src="img/hero.png"
+            class="header__img"
+            alt="Minimalist bank items"
+          />
+        </div>
       </div>
     </div>
 
@@ -92,9 +99,9 @@
             </div>
             <h5 class="features__header">100% digital bank</h5>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias
-              sint quos? Accusantium a fugiat porro reiciendis saepe quibusdam
-              debitis ducimus.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              alias sint quos? Accusantium a fugiat porro reiciendis saepe
+              quibusdam debitis ducimus.
             </p>
           </div>
         </div>
@@ -102,7 +109,7 @@
           <div class="feature_image image-2">
             <img
               src="img/grow-lazy.jpg"
-              data-src="img/digital.jpg"
+              data-src="img/grow.jpg"
               alt="grow"
               class="features__img lazy-img"
             />
@@ -115,9 +122,9 @@
             </div>
             <h5 class="features__header">Watch your money grow</h5>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias
-              sint quos? Accusantium a fugiat porro reiciendis saepe quibusdam
-              debitis ducimus.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              alias sint quos? Accusantium a fugiat porro reiciendis saepe
+              quibusdam debitis ducimus.
             </p>
           </div>
         </div>
@@ -125,7 +132,7 @@
           <div class="feature_image image-1">
             <img
               src="img/card-lazy.jpg"
-              data-src="img/digital.jpg"
+              data-src="img/card.jpg"
               alt="card"
               class="features__img lazy-img"
             />
@@ -138,17 +145,17 @@
             </div>
             <h5 class="features__header">Free debit card included</h5>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias
-              sint quos? Accusantium a fugiat porro reiciendis saepe quibusdam
-              debitis ducimus.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              alias sint quos? Accusantium a fugiat porro reiciendis saepe
+              quibusdam debitis ducimus.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="section--2">
-      <div class="section__title">
+    <section class="section" id="operations" >
+      <div class="section__title" id="operations">
         <h2 class="section__description">Operations</h2>
         <h3 class="section__header">
           Everything as simple as possible, but no simpler.
@@ -196,7 +203,7 @@
           </p>
         </div>
 
-        <div class="operations__content operations__content--2">
+        <div id="operations" class="operations__content operations__content--2">
           <div class="operations__icon operations__icon--2">
             <svg>
               <use xlink:href="img/icons.svg#icon-home"></use>
@@ -231,14 +238,14 @@
       </div>
     </section>
 
-    <section class="section" id="section--3">
+    <section class="section" id="section--3" >
       <div class="section__title section__title--testimonials">
         <h2 class="section__description">Not sure yet?</h2>
         <h3 class="section__header">
           Millions of Bankists are already making their lifes simpler.
         </h3>
       </div>
-      <div class="slider">
+      <div class="slider" >
         <div class="slide slide--1">
           <div class="testimonial">
             <h5 class="testimonial__header">Best financial decision ever!</h5>
@@ -258,7 +265,7 @@
           </div>
         </div>
         <div class="slide slide--2">
-          <div class="testimonial">
+          <div class="testimonial" >
             <h5 class="testimonial__header">
               The last step to becoming a complete minimalist
             </h5>
@@ -363,7 +370,7 @@
         <button class="btn">Next step &rarr;</button>
       </form>
     </div>
-    <div class="overlay hidden"></div>  -->
+    <div class="overlay hidden"></div>
     <script
       src="https://kit.fontawesome.com/545ea23f83.js"
       crossorigin="anonymous"

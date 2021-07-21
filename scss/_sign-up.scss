@@ -1,3 +1,4 @@
+@import './variables';
 .section--sign-up {
   background-color: #37383d;
   border-top: none;
@@ -8,6 +9,12 @@
     font-size: 1.9rem;
     padding: 2rem 5rem;
   }
+
+  .section__title {
+    .section__header {
+      font-size: 3rem;
+    }
+  }
 }
 .section__title h3 {
   margin-bottom: 6rem;
@@ -16,9 +23,33 @@
 
 .section__title h4 {
   margin-bottom: 6rem;
-  color: white;
+  color: $color-white;
 }
 
 .section__header {
   text-align: center;
+}
+
+@media screen and (max-width: 553px) {
+  .section--sign-up {
+    .section__title {
+      .section__header {
+        font-size: 2rem;
+      }
+    }
+
+    .btn {
+      font-size: 1.9rem;
+      padding: 1rem 5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 391px) {
+  .section--sign-up {
+    .btn {
+      font-size: 1.9rem;
+      padding: 1rem 2rem;
+    }
+  }
 }

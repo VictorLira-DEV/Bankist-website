@@ -84,3 +84,42 @@
     }
   }
 }
+
+@media screen and (max-width: 743px) {
+  .operations {
+    .operations__tab-container {
+      flex-direction: column;
+      align-items: center;
+      .operations__tab {
+        width: 300px;
+        margin: 0 0 20px 0;
+      }
+    }
+
+    .operations__content {
+      padding: 2.5rem 2rem 6.5rem 2rem;
+      &.operations__content--active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 603px) {
+  #section--2 {
+    padding: 150px 0;
+  }
+}
+
+@media screen and (max-width: 471px) {
+  .operations__content {
+    &.operations__content--active {
+      padding: 40px 0;
+      p{
+        // text-align: justify;
+      }
+    }
+  }
+}

@@ -1,10 +1,9 @@
 //header title
 
 .header__title {
-  padding: 270px 20px 0 20px;
+  padding: 270px 60px 0 60px;
   flex: 1;
-  margin: 0 auto;
-  max-width: 115rem;
+  // max-width: 115rem;
   display: flex;
   // display: grid;
   // grid-template-columns: 3fr 2fr;
@@ -82,4 +81,27 @@
   .header__title h1 {
     font-size: 3.5rem;
   }
+
+  .header__title h4{
+    font-size: 1.7rem;
+  }
+
 }
+
+@media screen and (max-width: 611px) {
+  .header__title {
+    padding: 270px 20px 0 20px;
+  }
+}
+
+@media screen and (max-width: 423px) {
+  .header__title h1{
+    font-size: 2.5rem;
+  }
+
+  .header__title h4{
+    font-size: 1.5rem;
+  }
+}
+
+

@@ -114,6 +114,7 @@ const sectionObserver = new IntersectionObserver(revelSection, {
 
 allSections.forEach(section => {
   sectionObserver.observe(section);
+  section.classList.add("section--hidden");
 });
 
 //lazy loading images

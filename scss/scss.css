@@ -263,6 +263,7 @@ header {
   }
   .navigation .nav__links .nav__item .btn--open_account {
     color: #fff;
+    background: #59d676;
   }
 }
 
@@ -868,6 +869,7 @@ header {
 
 .footer .footer__copyright .footer__link {
   font-size: 1.4rem;
+  color: #aaa;
 }
 
 @media screen and (max-width: 527px) {
@@ -899,6 +901,7 @@ header {
   z-index: 1000;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  height: auto;
 }
 
 .modal.hidden {
@@ -924,16 +927,12 @@ header {
   line-height: 1.5;
 }
 
-.modal .modal__form {
-  margin: 0 3rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 2.5rem;
+.modal .modal__form .form-control {
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .modal .modal__form label {
@@ -993,6 +992,60 @@ header {
   font-weight: 400;
 }
 
+@media screen and (max-width: 911px) {
+  .modal {
+    width: 60vw;
+    padding: 5rem 6rem;
+  }
+  .modal .form-control {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .modal {
+    width: 60vw;
+    padding: 5rem 6rem;
+  }
+  .modal .modal__header {
+    font-size: 2rem;
+  }
+  .modal .form-control {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 671px) {
+  .modal {
+    width: 70vw;
+  }
+  .modal .form-control {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 539px) {
+  .modal {
+    width: 90vw;
+    padding: 5rem 3rem;
+  }
+  .modal .form-control {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1021,6 +1074,12 @@ body {
   transition: opacity 1s, -webkit-transform 1s;
   transition: transform 1s, opacity 1s;
   transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.section.section--hidden {
+  -webkit-transform: translatey(8rem);
+          transform: translatey(8rem);
+  opacity: 0;
 }
 
 .btn {

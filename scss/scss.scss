@@ -33,6 +33,10 @@ body {
   border-top: 1px solid $color-white;
 
   transition: transform 1s, opacity 1s;
+  &.section--hidden {
+    transform: translatey(8rem);
+    opacity: 0;
+}
 }
 
 //button

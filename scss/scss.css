@@ -75,7 +75,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 200px 0 0 0;
+    padding: 150px 20px 0 20px;
   }
   .header__title .header_banner--text {
     width: 100%;
@@ -86,6 +86,9 @@
   .header__title .header_banner--img {
     display: none;
   }
+  #section--1 {
+    padding-top: 6rem;
+  }
 }
 
 @media screen and (max-width: 532px) {
@@ -94,12 +97,6 @@
   }
   .header__title h4 {
     font-size: 1.7rem;
-  }
-}
-
-@media screen and (max-width: 611px) {
-  .header__title {
-    padding: 270px 20px 0 20px;
   }
 }
 

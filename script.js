@@ -109,7 +109,7 @@ const revelSection = function (entries, observer) {
 
 const sectionObserver = new IntersectionObserver(revelSection, {
   root: null,
-  threshold: 0.2,
+  threshold: 0.12,
 });
 
 allSections.forEach(section => {

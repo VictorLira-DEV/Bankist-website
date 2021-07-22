@@ -69,3 +69,9 @@ body {
   cursor: pointer;
   transition: all 0.3s;
 }
+
+@media screen and (max-width: 600px){
+  .section{
+    padding: 7rem 3rem;
+  }
+}

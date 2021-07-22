@@ -742,12 +742,6 @@ header {
   opacity: 1;
 }
 
-@media screen and (max-width: 767px) {
-  #section--3 {
-    padding: 150px 1.5rem;
-  }
-}
-
 @media screen and (max-width: 645px) {
   .slider .slide .testimonial {
     width: 100%;
@@ -880,6 +874,12 @@ header {
 @media screen and (max-width: 365px) {
   .footer {
     padding: 10rem 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #section--3 {
+    padding: 7rem 3rem;
   }
 }
 
@@ -1110,5 +1110,11 @@ body {
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+  .section {
+    padding: 7rem 3rem;
+  }
 }
 /*# sourceMappingURL=scss.css.map */

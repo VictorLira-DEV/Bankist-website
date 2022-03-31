@@ -1,9 +1,6 @@
 
 ## **<h2 align="center"> 💸 Bankist website </h2>**
 
-<h2 align="center"> 
-        😎  Personal Project ✔️
-</h2>
 <br>
 <p align="center">
   <a href="#computer-demonstration-of-the-application">Demonstration of the application</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
